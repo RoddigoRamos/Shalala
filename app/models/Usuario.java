@@ -31,5 +31,7 @@ public class Usuario extends Model{
     public Date fechaNacimiento;
     public Integer grado;
     
+    public boolean isAdmin;
+    
     
 }
