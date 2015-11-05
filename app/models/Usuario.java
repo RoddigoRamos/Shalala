@@ -1,10 +1,10 @@
 
 package models;
 
+import com.google.code.morphia.annotations.Entity;
 import java.util.Date;
-import javax.persistence.Entity;
 import play.data.validation.*;
-import play.db.jpa.Model;
+import play.modules.morphia.Model;
 
 /**
  *

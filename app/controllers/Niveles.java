@@ -1,12 +1,10 @@
 
 package controllers;
 
-import play.mvc.Controller;
-
 /**
  *
  * @author rodrigo
  */
-public class Niveles extends Controller{
+public class Niveles extends CRUD{
     
 }
