@@ -5,3 +5,4 @@ require:
     - play -> morphia 1.2.12
     - play -> secure
     - play -> crud
+    - play -> sass 1.1
