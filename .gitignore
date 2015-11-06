@@ -1,16 +1,14 @@
-
-g
 *.DS_Store
 *.pyc
 
-Shalala/tmp
-Shalala/lib/
-Shalala/logs
-Shalala/precompile
-Shalala/javadoc
-Shalala/nbproject
-Shalala/.idea
-Shalala/node_modules
+/tmp
+/lib/
+/logs
+/precompile
+/javadoc
+/nbproject
+/.idea
+/node_modules
 
 Shalala.iml
 Shalala.ipr
@@ -18,10 +16,10 @@ Shalala.iws
 
 modules/
 .idea/
-/Shalala/test-result/
+/test-result/
 
-Shalala/.classpath
-Shalala/.project
-Shalala/.settings/
-Shalala/eclipse/
-Shalala/precompiled/
+/.classpath
+/.project
+/.settings/
+/eclipse/
+/precompiled/
