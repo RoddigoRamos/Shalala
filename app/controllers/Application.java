@@ -9,7 +9,7 @@ import play.mvc.With;
 import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
-@With(Secure.class)
+//@With(Secure.class)
 //@With(SecureSocial.class)
 public class Application extends Controller {
 
