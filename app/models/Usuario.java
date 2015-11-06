@@ -44,6 +44,11 @@ public class Usuario extends Model{
         this.grado = grado;
         this.isAdmin = isAdmin;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s ", this.nombre, this.primerApellido);
+    }
     
     
     
