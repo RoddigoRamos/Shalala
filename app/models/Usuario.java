@@ -32,6 +32,20 @@ public class Usuario extends Model{
     public Integer grado;
     
     public boolean isAdmin;
+
+    public Usuario(String usuario, String email, String password) {
+        this.usuario = usuario;
+        this.email = email;
+        this.password = password;
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.grado = grado;
+        this.isAdmin = isAdmin;
+    }
+    
+    
     
     
 }

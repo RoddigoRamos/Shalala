@@ -15,6 +15,8 @@ public class Security extends Secure.Security {
 
     static boolean authenticate(String username, String password) {
         
+        
+        
         Usuario usuario = Usuario.find("byEmail", username).first();
         return usuario != null && usuario.password.equals(password);
     }
