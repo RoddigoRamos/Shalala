@@ -9,22 +9,14 @@ import play.mvc.With;
 import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
-//@With(Secure.class)
-@With(SecureSocial.class)
+@With(Secure.class)
+//@With(SecureSocial.class)
 public class Application extends Controller {
 
-    public static void index() {
-        //String usuario = Security.connected();
-        SocialUser user = SecureSocial.getCurrentUser();
-        if (user.id.provider == ProviderType.facebook) {
-            JsonObject me = WS.url("https://graph.facebook.com/me?access_token=%s", user.accessToken).
-                    get().getJson().getAsJsonObject();
-            
-            render(user);
-        }
-        render();
+    public static void landingPage() {
+        String usuario = Security.connected();
         
-    }
-    }
+        render();
 
-
+    }
+}
