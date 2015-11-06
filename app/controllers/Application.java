@@ -2,6 +2,7 @@ package controllers;
 
 import com.google.gson.JsonObject;
 import controllers.securesocial.SecureSocial;
+import models.Usuario;
 import play.libs.WS;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -19,4 +20,17 @@ public class Application extends Controller {
         render();
 
     }
+    
+    public static void registrarUsuario(String usuario, String email,
+            String password){
+        Usuario usuarios = new Usuario(usuario, email, password);
+        usuarios.addUser(usuario, email, password);
+        usuarios.save();
+        landingPage();
+    }
+    
+    public static void memoramaBanderas(){
+        memoramaBanderas();
+    }
+    
 }

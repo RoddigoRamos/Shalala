@@ -118,7 +118,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="@{'/public/images/geo.png'}" alt="">
-                <h3>Geografía</h3>
+                <a href="@{Application.memoramaBanderas}"><h3>Geografía</h3></a>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="@{'/public/images/spa.png'}" alt="">
@@ -137,14 +137,15 @@
                 <hr class="star-primary">
             </div>
         </div>
+        #{form @Application.registrarUsuario()}
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Usuario</label>
-                            <input type="text" class="form-control" placeholder="Usuario" id="name" required
-                                   data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" placeholder="Usuario" id="usuario" required
+                                   data-validation-required-message="Please enter your name." value="${params.usuario}">
 
                             <p class="help-block text-danger"></p>
                         </div>
@@ -154,7 +155,7 @@
                             <label>Correo Electrónico</label>
                             <input type="email" class="form-control" placeholder="Correo Electrónico" id="email"
                                    required
-                                   data-validation-required-message="Please enter your email address.">
+                                   data-validation-required-message="Please enter your email address." value="${params.email}">
 
                             <p class="help-block text-danger"></p>
                         </div>
@@ -162,8 +163,8 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Contraseña</label>
-                            <input type="tel" class="form-control" placeholder="Contraseña" id="phone" required
-                                   data-validation-required-message="Please enter your phone number.">
+                            <input type="password" class="form-control" placeholder="Contraseña" id="password" required
+                                   data-validation-required-message="Please enter your phone number." value="${params.password}">
 
                             <p class="help-block text-danger"></p>
                         </div>
@@ -178,6 +179,7 @@
                 </form>
             </div>
         </div>
+        #{/form}
     </div>
 </section>
 

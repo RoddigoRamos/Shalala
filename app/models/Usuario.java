@@ -37,12 +37,6 @@ public class Usuario extends Model{
         this.usuario = usuario;
         this.email = email;
         this.password = password;
-        this.nombre = nombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.fechaNacimiento = fechaNacimiento;
-        this.grado = grado;
-        this.isAdmin = isAdmin;
     }
 
     @Override
@@ -50,7 +44,12 @@ public class Usuario extends Model{
         return String.format("%s %s ", this.nombre, this.primerApellido);
     }
     
-    
+    public Usuario addUser(String usuario, String email, String password){
+        Usuario nuevoUsuario = new Usuario(usuario, email, password);
+        //nuevoUsuario.addUser(usuario, email, password);
+        this.save();
+        return this;
+    }
     
     
 }
