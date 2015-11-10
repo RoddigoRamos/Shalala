@@ -21,10 +21,12 @@ public class Application extends Controller {
 
     }
     
-    public static void registrarUsuario(String usuario, String email,
+    public static void registrarUsuario(String usuario,String nombre, String primerApellido, String email,
             String password){
-        Usuario usuarios = new Usuario(usuario, email, password);
-        usuarios.addUser(usuario, email, password);
+        
+        
+        Usuario usuarios = new Usuario(usuario,nombre,primerApellido, email, password);
+        usuarios.addUser(usuario,nombre,primerApellido, email, password);
         usuarios.save();
         landingPage();
     }

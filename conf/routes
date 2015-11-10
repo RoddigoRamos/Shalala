@@ -7,7 +7,7 @@
 # Home page
 GET     /                                       Application.landingPage
 POST    /                                       Application.registrarUsuario
-GET     /juego                                  Application.memoramaBanderas
+GET     /juego                                  Juego.memoramaBanderas
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

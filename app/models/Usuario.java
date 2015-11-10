@@ -33,8 +33,10 @@ public class Usuario extends Model{
     
     public boolean isAdmin;
 
-    public Usuario(String usuario, String email, String password) {
+    public Usuario(String usuario,String nombre,String primerApellido, String email, String password) {
         this.usuario = usuario;
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
         this.email = email;
         this.password = password;
     }
@@ -44,12 +46,15 @@ public class Usuario extends Model{
         return String.format("%s %s ", this.nombre, this.primerApellido);
     }
     
-    public Usuario addUser(String usuario, String email, String password){
-        Usuario nuevoUsuario = new Usuario(usuario, email, password);
+    public Usuario addUser(String usuario,String nombre, String primerApellido, String email, String password){
+        Usuario nuevoUsuario = new Usuario(usuario, nombre, primerApellido, 
+                email, password);
         //nuevoUsuario.addUser(usuario, email, password);
         this.save();
         return this;
     }
+
+    
     
     
 }
