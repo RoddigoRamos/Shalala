@@ -10,10 +10,22 @@ import play.mvc.With;
 import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
+/**
+ *Controlador princiap de la aplicacion
+ *
+ * @author Rodrigo, Alex e Iza
+ * 
+*/
+
 //@With(Secure.class)
 //@With(SecureSocial.class)
 public class Application extends Controller {
 
+    
+    /**
+     * Metodo que se encarga de la seguriad en la landingpage
+     * 
+     */
     public static void landingPage() {
         SocialUser user = SecureSocial.getCurrentUser();
         
@@ -21,6 +33,15 @@ public class Application extends Controller {
 
     }
 
+    /**
+     * Metodo que se encarga del almacenamiento del registro de los usuarios
+     * 
+     * @param usuario
+     * @param nombre
+     * @param primerApellido
+     * @param email
+     * @param password 
+     */
     public static void registrarUsuario(String usuario, String nombre, String primerApellido, String email,
             String password) {
 
@@ -30,6 +51,10 @@ public class Application extends Controller {
         landingPage();
     }
 
+    /**
+     * 
+     * Metodo que se encarga de la renderizacion del minijuego
+     */
     public static void showMemoramaBanderas() {
         Juegos.memoramaBanderas();
     }

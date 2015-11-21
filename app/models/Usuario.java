@@ -8,6 +8,8 @@ import play.modules.morphia.Model;
 
 /**
  *
+ * Entidad para el almacenamiento de los datos de los usuarios en mongo
+ * 
  * @author rodrigo
  */
 @Entity

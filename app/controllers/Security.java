@@ -11,6 +11,8 @@ import models.Usuario;
 
 /**
  *
+ * Controlador encargado del inicio de sesion de los usuarios
+ * 
  * @author alejandro
  */
 public class Security extends Secure.Security {
@@ -24,6 +26,12 @@ public class Security extends Secure.Security {
     }
 
     
+    /**
+     * Metodo encargado de revisar si el usuario es administrador o no
+     * 
+     * @param profile
+     * 
+     */
     static boolean check(String profile) {
         Usuario usuario = Usuario.find("byEmail", connected()).first();
         if ("administrador".equals(profile)) {
