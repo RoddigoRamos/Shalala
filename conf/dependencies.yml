@@ -1,0 +1,9 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> morphia 1.2.12
+    - play -> secure
+    - play -> crud
+    - play -> sass 1.1
+    - play -> securesocial 0.2.6
