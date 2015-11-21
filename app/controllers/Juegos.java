@@ -11,7 +11,7 @@ import play.mvc.Controller;
 public class Juegos extends Controller{
     
     public static void memoramaBanderas(){
-        memoramaBanderas();
+        renderTemplate("juegos/memoramaBanderas.html");
     }
     
 }
