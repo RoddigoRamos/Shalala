@@ -11,7 +11,7 @@ import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
 //@With(Secure.class)
-@With(SecureSocial.class)
+//@With(SecureSocial.class)
 public class Application extends Controller {
 
     public static void landingPage() {

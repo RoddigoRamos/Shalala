@@ -26,7 +26,7 @@ public class Security extends Secure.Security {
     
     static boolean check(String profile) {
         Usuario usuario = Usuario.find("byEmail", connected()).first();
-        if ("administrator".equals(profile)) {
+        if ("administrador".equals(profile)) {
             return usuario.isAdmin;
         } else {
             return false;
