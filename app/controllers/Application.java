@@ -15,24 +15,35 @@ import securesocial.provider.ProviderType;
 public class Application extends Controller {
 
     public static void landingPage() {
-        String usuario = Security.connected();
+        SocialUser user = SecureSocial.getCurrentUser();
         
         render();
 
     }
-    
-    public static void registrarUsuario(String usuario,String nombre, String primerApellido, String email,
-            String password){
-        
-        
-        Usuario usuarios = new Usuario(usuario,nombre,primerApellido, email, password);
-        usuarios.addUser(usuario,nombre,primerApellido, email, password);
+
+    public static void registrarUsuario(String usuario, String nombre, String primerApellido, String email,
+            String password) {
+
+        Usuario usuarios = new Usuario(usuario, nombre, primerApellido, email, password);
+        usuarios.addUser(usuario, nombre, primerApellido, email, password);
         usuarios.save();
         landingPage();
     }
-    
-    public static void memoramaBanderas(){
-        memoramaBanderas();
+
+    public static void showMemoramaBanderas() {
+        Juegos.memoramaBanderas();
     }
-    
+
+    static Usuario currentUser() {
+        SocialUser currentUser = SecureSocial.getCurrentUser();
+        return Usuario.find("email", currentUser.email).first();
+    }
+
+    static Usuario user(String email) {
+        return Usuario.find("email", email).first();
+    }
+
+    static boolean isCurrentUser(Usuario user) {
+        return currentUser().email.equals(user.email);
+    }
 }
