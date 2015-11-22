@@ -11,7 +11,7 @@ import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
 /**
- *Controlador princiap de la aplicacion
+ *Controlador principal de la aplicación
  *
  * @author Rodrigo, Alex e Iza
  * 
@@ -21,9 +21,8 @@ import securesocial.provider.ProviderType;
 //@With(SecureSocial.class)
 public class Application extends Controller {
 
-    
     /**
-     * Metodo que se encarga de la renderizacion de la landingpage
+     * Método que se encarga de la renderización de la landing page
      * 
      */
     public static void landingPage() {    
@@ -35,10 +34,8 @@ public class Application extends Controller {
         render();
     }
 
-    
-    
     /**
-     * Metodo que se encarga del almacenamiento del registro de los usuarios
+     * Método que se encarga del almacenamiento del registro de los usuarios
      * 
      * @param usuario
      * @param nombre
@@ -57,7 +54,7 @@ public class Application extends Controller {
 
     /**
      * 
-     * Metodo que se encarga de la renderizacion del minijuego
+     * Método que se encarga de la renderización del minijuego
      */
     public static void showMemoramaBanderas() {
         Juegos.memoramaBanderas();
