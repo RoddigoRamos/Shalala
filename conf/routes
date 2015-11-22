@@ -2,13 +2,16 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-*      /auth            module:securesocial
-
 # Home page
 GET     /                                       Application.landingPage
 POST    /                                       Application.registrarUsuario
 GET     /                                       Application.showMemoramaBanderas
 GET     /                                       Applicaton.main
+
+# Secure Social module
+*      /auth            module:securesocial
+
+# CRUD module
 *       /admin                                  module:crud
 
 # Ignore favicon requests
