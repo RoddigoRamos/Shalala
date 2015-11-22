@@ -7,6 +7,8 @@ package controllers;
 
 
 import models.Usuario;
+import org.hibernate.annotations.Check;
+import play.mvc.results.RenderTemplate;
 
 
 /**
@@ -24,7 +26,17 @@ public class Security extends Secure.Security {
         Usuario usuario = Usuario.find("byEmail", username).first();
         return usuario != null && usuario.password.equals(password);
     }
-
+    
+    /*
+    static void onAuthenticated() {
+        Usuario usuario = Usuario.find("byEmail", connected()).first();
+        if (usuario.isAdmin==false) {
+            Application.main();
+        } else {
+            renderTemplate("/usuarios/list.html");
+        }
+        
+    }*/
     
     /**
      * Metodo encargado de revisar si el usuario es administrador o no

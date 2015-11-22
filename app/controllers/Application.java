@@ -23,16 +23,24 @@ public class Application extends Controller {
 
     
     /**
-     * Metodo que se encarga de la seguriad en la landingpage
+     * Metodo que se encarga de la renderizacion de la landingpage
      * 
      */
     public static void landingPage() {
-        SocialUser user = SecureSocial.getCurrentUser();
+       
         
         render();
 
     }
+    
+    public static void main(){
+        SocialUser user = SecureSocial.getCurrentUser();
+        
+        render();
+    }
 
+    
+    
     /**
      * Metodo que se encarga del almacenamiento del registro de los usuarios
      * 
@@ -48,7 +56,7 @@ public class Application extends Controller {
         Usuario usuarios = new Usuario(usuario, nombre, primerApellido, email, password);
         usuarios.addUser(usuario, nombre, primerApellido, email, password);
         usuarios.save();
-        landingPage();
+        main();
     }
 
     /**

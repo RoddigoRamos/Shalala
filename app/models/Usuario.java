@@ -35,6 +35,9 @@ public class Usuario extends Model{
     
     public boolean isAdmin;
 
+    public Usuario(){
+        
+    }
     public Usuario(String usuario,String nombre,String primerApellido, String email, String password) {
         this.usuario = usuario;
         this.nombre = nombre;
