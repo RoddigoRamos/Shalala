@@ -26,16 +26,12 @@ public class Application extends Controller {
      * Metodo que se encarga de la renderizacion de la landingpage
      * 
      */
-    public static void landingPage() {
-       
-        
+    public static void landingPage() {    
         render();
-
     }
     
     public static void main(){
         SocialUser user = SecureSocial.getCurrentUser();
-        
         render();
     }
 
