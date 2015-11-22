@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
+#{extends '/Application/main.html' /}
+#{set title:'Geografía - Memorama' /}
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Juego de Memoria de banderas</title>
     <style>
-	form {
-	width:330px;
-	margin:20px;
-	background-color:green;
-	padding:20px;
-	}
-	input {
-	text-align:right;
-	}
-	</style>
+        form {
+        width:330px;
+        margin:20px;
+        background-color:green;
+        padding:20px;
+        }
+        input {
+        text-align:right;
+        }
+    </style>
     <script type="text/javascript">
 	var cancho = 900;
 	var calto = 400;
@@ -202,12 +202,13 @@ function init(){
 
 
 
-</script>
+
+    </script>
 </head>
-<body onLoad="init();">  
+<body onLoad="init();">
 <canvas id="canvas" width="900" height="400">
-Tu navegador no soporta el elemento canvas de HTML5.
-</canvas>  
+    Tu navegador no soporta el elemento canvas de HTML5.
+</canvas>
 <br/>
 
 
