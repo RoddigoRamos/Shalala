@@ -6,7 +6,7 @@
 GET     /                                       Application.landingPage
 POST    /                                       Application.registrarUsuario
 GET     /                                       Application.showMemoramaBanderas
-GET     /                                       Applicaton.main
+GET     /main                                   Application.main
 
 # Secure Social module
 *      /auth            module:securesocial
