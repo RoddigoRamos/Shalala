@@ -17,7 +17,7 @@ public class Security extends Secure.Security {
         Usuario usuario = Usuario.find("byEmail", username).first();
         return usuario != null && usuario.password.equals(password);
     }
-<<<<<<< HEAD
+
     
     
     static void onAuthenticated() {
@@ -26,12 +26,12 @@ public class Security extends Secure.Security {
             Application.main();
         
         
-=======
+
 
     static void onAuthenticated() {
         Usuario usuario = Usuario.find("byEmail", connected()).first();
         Application.main();
->>>>>>> d3342f2d7fc97905be8b08d295c6784d576ecfd7
+
     }
     
     /**
