@@ -1,8 +1,10 @@
 package controllers;
 
 import com.google.gson.JsonObject;
+
 import controllers.securesocial.SecureSocial;
 import models.Usuario;
+
 import play.libs.WS;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -11,24 +13,23 @@ import securesocial.provider.SocialUser;
 import securesocial.provider.ProviderType;
 
 /**
- *Controlador principal de la aplicación
+ *Controlador princial de la aplicación
  *
  * @author Rodrigo, Alex e Iza
- * 
+ *
 */
-
 //@With(Secure.class)
 //@With(SecureSocial.class)
 public class Application extends Controller {
 
     /**
      * Método que se encarga de la renderización de la landing page
-     * 
+     *
      */
-    public static void landingPage() {    
+    public static void landingPage() {
         render();
     }
-    
+
     public static void main(){
         SocialUser user = SecureSocial.getCurrentUser();
         render();
@@ -36,12 +37,12 @@ public class Application extends Controller {
 
     /**
      * Método que se encarga del almacenamiento del registro de los usuarios
-     * 
+
      * @param usuario
      * @param nombre
      * @param primerApellido
      * @param email
-     * @param password 
+     * @param password ord
      */
     public static void registrarUsuario(String usuario, String nombre, String primerApellido, String email,
             String password) {
@@ -52,8 +53,7 @@ public class Application extends Controller {
         main();
     }
 
-    /**
-     * 
+    /* *
      * Método que se encarga de la renderización del minijuego
      */
     public static void showMemoramaBanderas() {

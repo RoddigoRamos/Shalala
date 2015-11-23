@@ -1,117 +1,20 @@
-<!DOCTYPE html>
+#{extends '/main.html' /}
+#{set title: 'inicio' /}
 
-<html>
-<head>
-    <meta charset="${_response_encoding}">
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-3.3.5.min.css'}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/AdminLTE.min.css'}">
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/skin-red.css'}">
-    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <title>Inicio</title>
-</head>
-<body class="hold-transition skin-red fixed sidebar-mini">
-<div class="wrapper">
-    <header class="main-header">
-        <!-- Logo -->
-        <a href="../../index2.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">shalalá</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>SHALALÁ</b></span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
+<div class="callout callout-warning">
+    <h4>¡Bienvenido!</h4>
 
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown user user-menu">
-                        <!-- TODO: Agregar imagen de usuario -->
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Username</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Nivel X</small>
-                                </p>
-                            </li>
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Salir</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <ul class="sidebar-menu">
-                <li class="header">MATERIAS</li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-globe"></i>
-                        <span>Geografía</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li>
-                            <a href="@{Application.showMemoramaBanderas}">
-                                <i class="fa fa-flag"></i> Memorama de Banderas
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <!-- /.sidebar -->
-    </aside>
-
-    <div class="content-wrapper">
-        <section class="content-header">
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-
-                <!--<li><a href="#">Layout</a></li>
-                <li class="active">Fixed</li>-->
-            </ol>
-        </section>
-        <section class="content">
-            #{doLayout /}
-        </section>
-    </div>
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.1
-        </div>
-        <strong>Copyright &copy; 2015 <a href="http://almsaeedstudio.com">Shalalá</a>.</strong> Todos los derechos
-        reservados.
-    </footer>
+    <p>Recuérda que debes llenar tus datos para mejorar    <i class="fa fa-magic"></i></p>
 </div>
-<script src="@{'/public/javascripts/jquery-2.1.4.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/bootstrap-3.3.5.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/jquery.slimscroll.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/fastclick.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/app.min.js'}" type="text/javascript"></script>
-</body>
-</html>
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">¡Bienvenido ${usuario}!</h3>
+    </div>
+    <div class="box-body">
+        <h2><a href="#">
+            ¡Vamos a jugar! ¡Prueba el nuevo juego: Memorama de Banderas!  <i class="fa fa-globe"></i>
+            <i class="fa fa-flag"></i></a>
+        </h2>
+    </div>
+</div>
