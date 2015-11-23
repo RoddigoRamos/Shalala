@@ -60,6 +60,8 @@ public class Usuario extends Model{
     }
 
     
-    
+    public String getNombreCompleto(){
+        return String.format("%s %s", this.nombre,this.primerApellido);
+    }
     
 }

@@ -27,16 +27,14 @@ public class Security extends Secure.Security {
         return usuario != null && usuario.password.equals(password);
     }
     
-    /*
+    
     static void onAuthenticated() {
         Usuario usuario = Usuario.find("byEmail", connected()).first();
-        if (usuario.isAdmin==false) {
-            Application.main();
-        } else {
-            renderTemplate("/usuarios/list.html");
-        }
         
-    }*/
+            Application.main();
+        
+        
+    }
     
     /**
      * Metodo encargado de revisar si el usuario es administrador o no
