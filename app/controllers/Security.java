@@ -5,9 +5,8 @@ import org.hibernate.annotations.Check;
 import play.mvc.results.RenderTemplate;
 
 /**
- *
  * Controlador encargado del inicio de sesión de los usuarios
- * 
+ *
  * @author alejandro
  */
 public class Security extends Secure.Security {
@@ -18,21 +17,16 @@ public class Security extends Secure.Security {
         return usuario != null && usuario.password.equals(password);
     }
 
-    
-    
     static void onAuthenticated() {
         Usuario usuario = Usuario.find("byEmail", connected()).first();
-        
-            Application.main();
-        
 
+        Application.main();
     }
-    
+
     /**
      * Método encargado de autenticar al usuario como administrador
-     * 
+     *
      * @param profile
-     * 
      */
     static boolean check(String profile) {
         Usuario usuario = Usuario.find("byEmail", connected()).first();

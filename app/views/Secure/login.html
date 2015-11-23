@@ -6,13 +6,19 @@
     <title>Shalalá | Iniciar Sesión</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
+
+    #{if (play.Play.id.equals("dev")) }
     <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-3.3.5.min.css'}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Theme style -->
     <link rel="stylesheet" href="@{'/public/stylesheets/AdminLTE.min.css'}">
+    #{/if}
+
+    #{if (play.Play.id.equals("prod")) }
+    <link href="@{'/public/build/appIn.css'}">
+    #{/if}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
 <div class="hold-transition login-page" id="login">
 
@@ -58,7 +64,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        
+
                         <button type="submit" id="signin" class="btn btn-primary btn-block btn-flat">Entrar</button>
                     </div>
                     <!-- /.col -->
@@ -67,18 +73,26 @@
 
             <div class="social-auth-links text-center">
                 <p>- O -</p>
-                <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i>
-                     Entrar
+                <a href="/auth/facebook" class="btn btn-block btn-social btn-facebook btn-flat"><i
+                        class="fa fa-facebook"></i>
+                    Entrar
                     con Facebook</a>
             </div>
-            <a href="@{Application.landingPage()}" class="text-center">Registrarme</a>        
+            <a href="@{Application.landingPage()}" class="text-center">Registrarme</a>
         </div>
     </div>
     #{/form}
 </div>
 
+#{if (play.Play.id.equals("dev")) }
 <script src="@{'/public/javascripts/jquery-2.1.4.min.js'}" type="text/javascript"></script>
 <script src="@{'/public/javascripts/bootstrap-3.3.5.min.js'}" type="text/javascript"></script>
 <script src="@{'/public/javascripts/icheck.min.js'}" type="text/javascript"></script>
+#{/if}
+
+#{if (play.Play.id.equals("prod")) }
+<script src="@{'/public/build/appIn.js'}" type="text/javascript"></script>
+#{/if}
+
 </body>
 </html>
