@@ -1,8 +1,6 @@
-
 package controllers;
 
 import play.mvc.Controller;
-
 
 /**
  *Controlador encargado del minijuego
@@ -11,13 +9,12 @@ import play.mvc.Controller;
  * @author rodrigo
  */
 public class Juegos extends Controller{
-    
-    
+
     /**
-     * Metodo que se encarga de la renderizacion del minijuego
+     * Método que se encarga de la renderización del minijuego
      */
     public static void memoramaBanderas(){
         renderTemplate("juegos/memoramaBanderas.html");
     }
-    
+
 }

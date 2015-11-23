@@ -6,10 +6,10 @@
 GET     /                                       Application.landingPage
 POST    /                                       Application.registrarUsuario
 GET     /                                       Application.showMemoramaBanderas
-GET     /                                       Applicaton.main
+GET     /main                                   Application.principal
 
 # Secure Social module
-*      /auth            module:securesocial
+*       /auth                                    module:securesocial
 
 # CRUD module
 *       /admin                                  module:crud
@@ -23,6 +23,5 @@ GET     /public/                                staticDir:public
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
 
-    /                                       module:secure
-
+        /                                       module:secure
 

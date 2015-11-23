@@ -1,5 +1,7 @@
-<!DOCTYPE html>
+#{extends '/main.html' /}
+#{set title: 'inicio' /}
 
+<<<<<<< HEAD
 <html>
 <head>
     <title>#{get 'title' /}</title>
@@ -356,32 +358,22 @@
         </section>
         <!-- /.sidebar -->
     </aside>
+=======
+<div class="callout callout-warning">
+    <h4>¡Bienvenido!</h4>
 
-    <div class="content-wrapper">
-        <section class="content-header">
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Layout</a></li>
-                <li class="active">Fixed</li>
-            </ol>
-        </section>
-        <section class="content">
-            #{doLayout /}
-        </section>
-    </div>
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.1
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
+    <p>Recuérda que debes llenar tus datos para mejorar    <i class="fa fa-magic"></i></p>
 </div>
-<script src="@{'/public/javascripts/jquery-2.1.4.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/bootstrap-3.3.5.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/jquery.slimscroll.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/fastclick.min.js'}" type="text/javascript"></script>
-<script src="@{'/public/javascripts/app.min.js'}" type="text/javascript"></script>
-</body>
-</html>
+>>>>>>> d3342f2d7fc97905be8b08d295c6784d576ecfd7
+
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">¡Bienvenido ${usuario}!</h3>
+    </div>
+    <div class="box-body">
+        <h2><a href="#">
+            ¡Vamos a jugar! ¡Prueba el nuevo juego: Memorama de Banderas!  <i class="fa fa-globe"></i>
+            <i class="fa fa-flag"></i></a>
+        </h2>
+    </div>
+</div>
