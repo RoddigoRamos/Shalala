@@ -5,14 +5,14 @@
     <meta charset="${_response_encoding}">
 
     #{if (play.Play.id.equals("dev")) }
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-3.3.5.min.css'}">
-        <link rel="stylesheet" href="@{'/public/stylesheets/AdminLTE.min.css'}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/skin-red.css'}">
-        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap-3.3.5.min.css'}">
+    <link rel="stylesheet" href="@{'/public/stylesheets/AdminLTE.min.css'}">
+    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/skin-red.css'}">
+    <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     #{/if}
 
     #{if (play.Play.id.equals("prod")) }
-        <link href="@{'/public/build/appIn.css'}">
+    <link href="@{'/public/build/appIn.css'}">
     #{/if}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>Inicio</title>
@@ -106,15 +106,15 @@
 </div>
 
 #{if (play.Play.id.equals("dev")) }
-    <script src="@{'/public/javascripts/jquery-2.1.4.min.js'}" type="text/javascript"></script>
-    <script src="@{'/public/javascripts/bootstrap-3.3.5.min.js'}" type="text/javascript"></script>
-    <script src="@{'/public/javascripts/jquery.slimscroll.min.js'}" type="text/javascript"></script>
-    <script src="@{'/public/javascripts/fastclick.min.js'}" type="text/javascript"></script>
-    <script src="@{'/public/javascripts/app.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery-2.1.4.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/bootstrap-3.3.5.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/jquery.slimscroll.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/fastclick.min.js'}" type="text/javascript"></script>
+<script src="@{'/public/javascripts/app.min.js'}" type="text/javascript"></script>
 #{/if}
 
 #{if (play.Play.id.equals("prod")) }
-    <script src="@{'/public/build/appIn.js'}" type="text/javascript"></script>
+<script src="@{'/public/build/appIn.js'}" type="text/javascript"></script>
 #{/if}
 </body>
 </html>
