@@ -167,6 +167,7 @@ function flipback() {
 }
 
 function init(){
+   console.log("entré")
    ctx = document.getElementById('canvas').getContext('2d');
    canvas1 = document.getElementById('canvas');
    canvas1.addEventListener('click',elegir,false);
