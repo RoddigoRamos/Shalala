@@ -25,12 +25,6 @@ public class Security extends Secure.Security {
         
             Application.main();
         
-        
-
-
-    static void onAuthenticated() {
-        Usuario usuario = Usuario.find("byEmail", connected()).first();
-        Application.main();
 
     }
     

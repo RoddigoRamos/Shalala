@@ -5,8 +5,9 @@
 # Home page
 GET     /                                       Application.landingPage
 POST    /                                       Application.registrarUsuario
-GET     /                                       Application.showMemoramaBanderas
+GET     /juego                                  Application.showMemoramaBanderas
 GET     /main                                   Application.principal
+#GET     /                                       Juegos.memoramabanderas
 
 # Secure Social module
 *       /auth                                    module:securesocial
