@@ -6,7 +6,7 @@ import play.mvc.Controller;
  *Controlador encargado del minijuego
  * 
  * 
- * @author rodrigo
+ * @author Alejandro Rodríguez González
  */
 public class Juegos extends Controller{
 

@@ -7,7 +7,7 @@ import play.mvc.results.RenderTemplate;
 /**
  * Controlador encargado del inicio de sesión de los usuarios
  *
- * @author alejandro
+ * @author Alejandro Rodríguez González
  */
 public class Security extends Secure.Security {
 

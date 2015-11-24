@@ -15,7 +15,7 @@ import securesocial.provider.ProviderType;
 /**
  *Controlador princial de la aplicación
  *
- * @author Rodrigo, Alex e Iza
+ * @author Alejandro Rodríguez González
  *
 */
 //@With(Secure.class)
@@ -53,12 +53,18 @@ public class Application extends Controller {
         main();
     }
 
-    /* *
+    /**
      * Método que se encarga de la renderización del minijuego
+     * 
      */
     public static void showMemoramaBanderas() {
         Juegos.memoramaBanderas();
     }
+    
+    /**
+     * Método egresa el usuario buscandolo por su email.
+     * @return 
+     */
 
     static Usuario currentUser() {
         SocialUser currentUser = SecureSocial.getCurrentUser();

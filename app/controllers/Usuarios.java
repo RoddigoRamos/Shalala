@@ -7,8 +7,9 @@ import play.mvc.Router;
 import play.mvc.With;
 
 /**
+ * Controlador para un usuario.
  *
- * @author rodrigo
+ * @author Rodrigo Ramos Nájera
  */
 
 @With(Secure.class)

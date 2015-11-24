@@ -8,9 +8,9 @@ import org.mongodb.morphia.annotations.Entity;
 
 /**
  *
- * Entidad para el almacenamiento de los datos de los usuarios en mongo
+ * Modelo que almacena los datos de un usuario en el sistema.
  * 
- * @author rodrigo
+ * @author Rodrigo Ramos Nájera
  */
 @Entity
 public class Usuario extends Model{
@@ -37,6 +37,16 @@ public class Usuario extends Model{
 
     public Usuario() {}
 
+    /**
+     * Método constructor de un usuario.
+     * 
+     * @param usuario
+     * @param nombre
+     * @param primerApellido
+     * @param email
+     * @param password 
+     */
+    
     public Usuario(String usuario,String nombre,String primerApellido, String email, String password) {
         this.usuario = usuario;
         this.nombre = nombre;
@@ -50,6 +60,17 @@ public class Usuario extends Model{
         return String.format("%s %s ", this.nombre, this.primerApellido);
     }
     
+    /**
+     * Método para agregar un usuario.
+     * 
+     * @param usuario
+     * @param nombre
+     * @param primerApellido
+     * @param email
+     * @param password
+     * @return 
+     */
+    
     public Usuario addUser(String usuario,String nombre, String primerApellido, String email, String password){
         Usuario nuevoUsuario = new Usuario(usuario, nombre, primerApellido, 
                 email, password);
@@ -58,6 +79,10 @@ public class Usuario extends Model{
         return this;
     }
 
+    /**
+     * Método para obtener Nombre y Apellido de un usuario.
+     * @return 
+     */
     
     public String getNombreCompleto(){
         return String.format("%s %s", this.nombre,this.primerApellido);
