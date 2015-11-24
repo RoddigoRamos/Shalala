@@ -2,15 +2,15 @@ package controllers;
 
 import com.google.gson.JsonObject;
 
-//import controllers.securesocial.SecureSocial;
+import controllers.securesocial.SecureSocial;
 import models.Usuario;
 
 import play.libs.WS;
 import play.mvc.Controller;
 import play.mvc.With;
 
-//import securesocial.provider.SocialUser;
-//import securesocial.provider.ProviderType;
+import securesocial.provider.SocialUser;
+import securesocial.provider.ProviderType;
 
 /**
  *Controlador princial de la aplicación
@@ -31,7 +31,7 @@ public class Application extends Controller {
     }
 
     public static void main(){
-        //SocialUser user = SecureSocial.getCurrentUser();
+        SocialUser user = SecureSocial.getCurrentUser();
         render();
     }
 
@@ -66,16 +66,16 @@ public class Application extends Controller {
      * @return 
      */
 
-//    static Usuario currentUser() {
-//       // SocialUser currentUser = SecureSocial.getCurrentUser();
-//        return Usuario.find("email", currentUser.email).first();
-//    }
+    static Usuario currentUser() {
+        SocialUser currentUser = SecureSocial.getCurrentUser();
+        return Usuario.find("email", currentUser.email).first();
+    }
 
     static Usuario user(String email) {
         return Usuario.find("email", email).first();
     }
 
-//    static boolean isCurrentUser(Usuario user) {
-//        return currentUser().email.equals(user.email);
-//    }
+    static boolean isCurrentUser(Usuario user) {
+        return currentUser().email.equals(user.email);
+    }
 }
